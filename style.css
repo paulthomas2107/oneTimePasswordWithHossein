@@ -16,7 +16,7 @@ body {
 
 .container {
   width: 400px;
-  height: 400px;
+  height: min-content;
   padding: 30px;
   text-align: center;
   border-radius: 12px;
@@ -68,4 +68,35 @@ body {
   transition: 0.1s ease-in-out;
 }
 
-.container form input;
+.container form input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.container form input:focus {
+  outline-offset: 3px;
+  outline: 2px solid #4135d6;
+}
+
+.container form button {
+  cursor: pointer;
+  color: #fff;
+  background: #4135d6;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 18px;
+  /* font-weight: 500;*/
+  border-radius: 8px;
+  letter-spacing: 0.5;
+  pointer-events: none;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.container form button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container form button:hover {
+  background: #4035d6e9;
+}
